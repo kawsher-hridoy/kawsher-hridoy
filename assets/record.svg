@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 456" width="880" height="456" role="img"
+     aria-label="Competition record, as Team Lead of Cortex Crew. Champion — CSAD 2026, built Darktrace3. 1st Runners-up — IEEE ICADHI 2026, built Niro. Reached the final: AI Project Competition 2026, 5th Data Science Summit, AI Innovation Hackathon 2026. Five competitions, two podium, three finalist.">
+  <!--
+    A results sheet, same system as cortexcrew.vercel.app: colour means a
+    result and nothing else — gold and silver mean won, cyan means reached the
+    final. The rules are static structure; only the coloured rails and the
+    rows animate, so a failed animation costs the motion, never the record.
+  -->
+  <style>
+    text {
+      font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas,
+                   "Liberation Mono", "DejaVu Sans Mono", monospace;
+    }
+    .label   { fill: #78829e; font-size: 10px; font-weight: 600; letter-spacing: 0.16em; }
+    .rank-g  { fill: #fbbf24; font-size: 24px; font-weight: 700; }
+    .rank-s  { fill: #cbd5e1; font-size: 24px; font-weight: 700; }
+    .rank-f  { fill: #22d3ee; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
+    .event   { fill: #9aa4b8; font-size: 13px; }
+    .built   { fill: #78829e; font-size: 10px; font-weight: 600; letter-spacing: 0.14em; }
+    .date    { fill: #78829e; font-size: 12px; }
+    .tally   { fill: #78829e; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; }
+
+    .rail {
+      transform: scaleY(0);
+      transform-box: fill-box;
+      transform-origin: 50% 0;
+      animation: grow 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .ra { animation-delay: 0.15s; }
+    .rb { animation-delay: 0.38s; }
+    @keyframes grow { to { transform: scaleY(1); } }
+
+    .row { opacity: 0; animation: rise 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    .d1 { animation-delay: 0.25s; }
+    .d2 { animation-delay: 0.48s; }
+    .d3 { animation-delay: 0.82s; }
+    .d4 { animation-delay: 0.94s; }
+    .d5 { animation-delay: 1.06s; }
+    .d6 { animation-delay: 1.24s; }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(6px); }
+      60%  { opacity: 1; }
+      to   { opacity: 1; transform: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .rail { animation: none; transform: none; }
+      .row  { animation: none; opacity: 1; }
+    }
+  </style>
+
+  <!-- card, bottom-right slash -->
+  <path d="M 6.5,0.5 H 873.5 Q 879.5,0.5 879.5,6.5 V 439.5 L 863.5,455.5 H 6.5 Q 0.5,455.5 0.5,449.5 V 6.5 Q 0.5,0.5 6.5,0.5 Z"
+        fill="#0a0a12" stroke="#313a57" stroke-width="1"/>
+
+  <!-- ── static structure: the sheet's rules and labels ── -->
+  <text x="32" y="36" class="label">COMPETITION RECORD</text>
+  <text x="848" y="36" class="label" text-anchor="end">AS TEAM LEAD · CORTEX CREW</text>
+  <line x1="32" y1="52.5" x2="848" y2="52.5" stroke="#1e2334" stroke-width="1"/>
+
+  <text x="32" y="292" class="label">REACHED THE FINAL</text>
+  <line x1="180" y1="288.5" x2="848" y2="288.5" stroke="#1e2334" stroke-width="1"/>
+
+  <line x1="32" y1="410.5" x2="848" y2="410.5" stroke="#1e2334" stroke-width="1"/>
+
+  <!-- ── podium: won ── -->
+  <rect class="rail ra" x="32" y="74" width="3" height="76" fill="#fbbf24"/>
+  <g class="row d1">
+    <text x="50" y="103" class="rank-g">CHAMPION</text>
+    <text x="848" y="100" class="date" text-anchor="end">JAN 2026</text>
+    <text x="50" y="129" class="event">CSAD 2026 — Project Showcasing · Cyber Security Centre, DIU</text>
+    <text x="50" y="149" class="built">BUILT · DARKTRACE3</text>
+  </g>
+
+  <rect class="rail rb" x="32" y="178" width="3" height="76" fill="#cbd5e1"/>
+  <g class="row d2">
+    <text x="50" y="207" class="rank-s">1ST RUNNERS-UP</text>
+    <text x="848" y="204" class="date" text-anchor="end">JUN 2026</text>
+    <text x="50" y="233" class="event">IEEE ICADHI 2026 — Project Showcase</text>
+    <text x="50" y="253" class="built">BUILT · NIRO</text>
+  </g>
+
+  <!-- ── reached the final: quieter, below the labelled hairline ── -->
+  <g class="row d3">
+    <text x="32" y="324" class="rank-f">FINALIST</text>
+    <text x="136" y="324" class="event">AI Project Competition 2026 · DIU CSE — built AI Mentor</text>
+    <text x="848" y="324" class="date" text-anchor="end">JUL 2026</text>
+  </g>
+  <g class="row d4">
+    <text x="32" y="354" class="rank-f">FINALIST</text>
+    <text x="136" y="354" class="event">5th Data Science Summit · DIU — built Niro</text>
+    <text x="848" y="354" class="date" text-anchor="end">JUL 2026</text>
+  </g>
+  <g class="row d5">
+    <text x="32" y="384" class="rank-f">FINALIST</text>
+    <text x="136" y="384" class="event">AI Innovation Hackathon 2026 · DIU CSE — built Autopilot</text>
+    <text x="848" y="384" class="date" text-anchor="end">JUL 2026</text>
+  </g>
+
+  <!-- the sheet closes on a rule, then the tally — 2 + 3 = 5, no overclaim -->
+  <g class="row d6">
+    <text x="32" y="436" class="tally">5 COMPETITIONS · 2 PODIUM · 3 FINALIST</text>
+  </g>
+</svg>

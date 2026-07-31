@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 236" width="880" height="236" role="img"
+     aria-label="Kawsher HRidoy — Team Lead @ Cortex Crew · ML &amp; Systems · Offensive Security · Dhaka, Bangladesh">
+  <!--
+    Hand-built. No external fonts (an SVG rendered as an image cannot fetch
+    any), so everything is set in the system monospace stack — the one family
+    whose metrics agree across platforms. Animation is CSS only; a reader with
+    prefers-reduced-motion gets the finished frame.
+  -->
+  <style>
+    text {
+      font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas,
+                   "Liberation Mono", "DejaVu Sans Mono", monospace;
+    }
+    .prompt  { fill: #78829e; font-size: 15px; }
+    .cmd     { fill: #e9edf7; font-size: 15px; font-weight: 600; }
+    .name    { fill: #e9edf7; font-size: 22px; font-weight: 700; }
+    .dim     { fill: #9aa4b8; font-size: 14px; font-weight: 400; }
+    .role    { fill: #9aa4b8; font-size: 14px; }
+    .loc     { fill: #78829e; font-size: 13px; }
+
+    /* typing: one tspan per character, revealed on a stagger — no dependence
+       on character advance, so it cannot drift across platform mono fonts */
+    .t  { opacity: 0; animation: on 0.01s linear forwards; }
+    .t1 { animation-delay: 0.35s; }
+    .t2 { animation-delay: 0.41s; }
+    .t3 { animation-delay: 0.47s; }
+    .t4 { animation-delay: 0.53s; }
+    .t5 { animation-delay: 0.59s; }
+    .t6 { animation-delay: 0.65s; }
+    @keyframes on { to { opacity: 1; } }
+
+    /* output lines: fade finishes before the travel does */
+    .out { opacity: 0; animation: rise 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    .o1  { animation-delay: 0.95s; }
+    .o2  { animation-delay: 1.12s; }
+    .o3  { animation-delay: 1.29s; }
+    .o4  { animation-delay: 1.60s; }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(7px); }
+      60%  { opacity: 1; }
+      to   { opacity: 1; transform: none; }
+    }
+
+    .cursor { fill: #e9edf7; opacity: 0; animation: blink 1.15s linear infinite 1.7s; }
+    @keyframes blink {
+      0%, 50%     { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .t, .out, .cursor { animation: none; opacity: 1; }
+    }
+  </style>
+
+  <!-- card: opaque ground so the panel reads the same on light and dark
+       GitHub; top-right corner carries the brand slash -->
+  <path d="M 6.5,0.5 H 863.5 L 879.5,16.5 V 229.5 Q 879.5,235.5 873.5,235.5 H 6.5 Q 0.5,235.5 0.5,229.5 V 6.5 Q 0.5,0.5 6.5,0.5 Z"
+        fill="#0a0a12" stroke="#313a57" stroke-width="1"/>
+
+  <text x="36" y="58" xml:space="preserve"><tspan class="prompt">~$ </tspan><tspan class="cmd t t1">w</tspan><tspan class="cmd t t2">h</tspan><tspan class="cmd t t3">o</tspan><tspan class="cmd t t4">a</tspan><tspan class="cmd t t5">m</tspan><tspan class="cmd t t6">i</tspan></text>
+
+  <text x="36" y="106" xml:space="preserve" class="out o1"><tspan class="name">Kawsher HRidoy</tspan><tspan class="dim">  — Team Lead @ Cortex Crew</tspan></text>
+
+  <text x="36" y="136" class="out o2 role">ML &amp; Systems · Offensive Security</text>
+
+  <text x="36" y="162" class="out o3 loc">Dhaka, Bangladesh</text>
+
+  <text x="36" y="202" class="out o4 prompt">~$</text>
+  <rect class="cursor" x="62" y="189" width="8.5" height="16"/>
+</svg>
